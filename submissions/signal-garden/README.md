@@ -1,6 +1,6 @@
 # Signal Garden
 
-![Signal Garden gameplay](https://raw.githubusercontent.com/raindogkitetu/friendsdk/main/games/signal-garden/media/signal-garden-960.png)
+![Signal Garden gameplay](https://raindogkitetu.github.io/friendsdk/signal-garden-960.png)
 
 **Project name**
 
