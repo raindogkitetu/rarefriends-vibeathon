@@ -51,8 +51,8 @@ gross-spend total remains, making repeat RF activity visible rather than reducin
 the loop to a net-balance snapshot.
 
 For every 10 simulated Signal Seeds, the model exposes **10 RF gross activity,
-8.5 RF expected harvest liability, 1 RF proposed burn and 0.5 RF proposed seasonal
-vault**. These are model values, not live transfers.
+8.5 RF expected harvest value, 1 RF proposed burn and 0.5 RF proposed seasonal
+vault**. Every possible reward remains fully reserved at its published maximum. These are model values, not live transfers.
 
 Repeat planting now also advances two **non-financial session goals** without
 changing RF odds or rewards: Bloom discovery remembers which of the four signals
@@ -85,7 +85,7 @@ npm run dev:game -- games/signal-garden
 **How do you play?**
 
 1. Connect a wallet and choose an eligible Friend.
-2. Choose **Buy a seed · 1 RF** and confirm the simulated action.
+2. Choose **Buy a seed · 1 sim RF** and confirm the simulated action.
 3. Choose an empty plot. Planting consumes one seed and reveals one bloom.
 4. Keep it for harmony or harvest its fixed simulated RF value.
 5. Fill twelve plots, or harvest blooms to reopen space and continue.
@@ -95,9 +95,10 @@ npm run dev:game -- games/signal-garden
    even when the compact dock hides the Collection button.
 
 Mouse, touch and keyboard navigation work. The game is silent by design and includes
-a reduced-motion setting. Interrupted settlement is recoverable through **Resume
-signal** without purchasing or consuming a second seed; while the game frame stays
-mounted, the recovered result returns to the plot the player originally selected.
+a reduced-motion setting. Preview currency is labeled **sim RF**. Interrupted
+settlement is recoverable through **Resume signal** without purchasing or consuming
+a second seed; while the game frame stays mounted, the recovered result is locked
+to the plot the player originally selected and cannot be moved to another plot.
 
 **Costs and rewards**
 
@@ -120,8 +121,9 @@ Everything is simulated and labeled.
 
 **Production-economy potential**
 
-The proposed live split per 1 RF planting is 0.85 RF expected harvest liability,
-0.10 RF burned and 0.05 RF sent to a seasonal vault. The burn is proportional and
+The proposed live split per 1 RF planting models 0.85 RF expected harvest value,
+0.10 RF burned and 0.05 RF sent to a seasonal vault, while each possible reward
+would still require full maximum backing. The burn is proportional and
 predictable rather than dependent on a player's loss. Kept blooms make the Friend
 visibly personal; harvesting returns the disclosed value and reopens scarce garden
 space. Community seasons can later fund fully covered garden goals and opt-in
@@ -151,7 +153,8 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
 - Deterministic economy assertions: pass.
 - Focused browser flow at 960 px and 360 px: pass.
 - The browser flow covers verified runtime startup, canonical artwork, buy,
-  confirmation, interrupted-settlement recovery, reveal, keep, inspect, harvest,
+  confirmation, interrupted-settlement recovery with plot locking, post-action
+  state-read retry and verified-refresh blocking, reveal, keep, inspect, harvest,
   cumulative token-activity accounting, Bloom discovery, Resonance, reduced motion
   and viewport bounds.
 - Browser console, sandbox and unexpected-signing checks: pass.
