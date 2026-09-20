@@ -160,10 +160,11 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
 - `friendsdk check`: pass; weights 10,000 bps, expected reward 0.85 RF, maximum
   reward 2.5 RF.
 - SDK-ledger bankroll stress test: pass. The same `game.json` is parsed through
-  FriendSDK and the actual preview ledger runs fifteen `buy → play → settle → redeem`
-  cycles at both outcome extremes. Fifteen 2.5 sim RF results still leave 2.5 sim RF
-  of free prize stake; fifteen 0.4 sim RF results still leave the player 11 sim RF
-  from the 20 sim RF starting balance.
+  FriendSDK and the actual preview ledger follows the real 12-slot garden order:
+  keep the first twelve blooms, then harvest one before each of signals 13–15 to
+  reopen a slot. Fifteen 2.5 sim RF results still leave 2.5 sim RF of free prize
+  stake; fifteen 0.4 sim RF results still leave the player 6.2 sim RF from the
+  20 sim RF starting balance while twelve 0.4 sim RF blooms remain kept.
 - Focused browser flow at 960, 760, 521 and 360 px: pass. The 960 px run also
   fills all twelve plots, verifies the full-garden purchase block, harvests to
   reopen space, and reaches the 15-signal EVERGREEN tier.
