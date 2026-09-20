@@ -12,7 +12,7 @@ Signal Garden
 **One sentence**
 
 Grow a personalized signal garden around your verified Rare Friend, where every
-simulated 1 RF Seed purchase creates measurable repeat token activity while Friend-specific
+simulated 1 RF seed purchase creates measurable repeat token activity while Friend-specific
 traits shape non-financial garden strategy.
 
 **Builder / contact**
@@ -26,8 +26,8 @@ Economy Potential (also relevant: Token Activity and Character Spotlight)
 **What did you build?**
 
 A personalized signal garden that grows around the player's verified Rare Friend.
-Buy a simulated 1 RF Signal Seed, then choose one of twelve plots, reveal a bloom, then
-keep it for harmony or harvest its fixed RF value. The Friend's real on-chain family
+Buy a 1 sim RF Signal Seed, choose one of twelve plots, reveal a bloom, then keep
+it for harmony or harvest its fixed sim RF value. The Friend's real on-chain family
 and art seed determine its bloom affinity and three signal plots, so the selected
 Friend directly affects non-financial garden strategy without changing RF odds.
 Affinity and signal layout are each reduced to four gameplay patterns, so different
@@ -57,9 +57,9 @@ is visible before opening any menu.** Harvesting reopens a scarce plot while the
 gross-spend total remains, making repeat RF activity visible rather than reducing
 the loop to a net-balance snapshot.
 
-For every 10 simulated Signal Seeds, the model exposes **10 RF gross activity,
-8.5 RF expected harvest value, 1 RF proposed burn and 0.5 RF proposed seasonal
-vault**. Every possible reward remains fully reserved at its published maximum. These are model values, not live transfers.
+For every 10 simulated Signal Seed purchases, the model exposes **10 sim RF gross
+activity, 8.5 sim RF expected harvest value, a 1 sim RF proposed-burn equivalent
+and a 0.5 sim RF proposed seasonal-vault equivalent**. Every possible reward remains fully reserved at its published maximum. These are model values, not live transfers.
 
 Repeat planting now also advances two **non-financial session goals** without
 changing RF odds or rewards: Bloom discovery remembers which of the four signals
@@ -113,14 +113,14 @@ Everything is simulated and labeled.
 
 | Result | Chance | Fixed harvest | Base harmony |
 | --- | ---: | ---: | ---: |
-| Dewbud | 50% / 5,000 bps | 0.4 RF | 1 |
-| Sunpetal | 30% / 3,000 bps | 1 RF | 2 |
-| Prismvine | 15% / 1,500 bps | 1.5 RF | 4 |
-| Starbloom | 5% / 500 bps | 2.5 RF | 8 |
+| Dewbud | 50% / 5,000 bps | 0.4 sim RF | 1 |
+| Sunpetal | 30% / 3,000 bps | 1 sim RF | 2 |
+| Prismvine | 15% / 1,500 bps | 1.5 sim RF | 4 |
+| Starbloom | 5% / 500 bps | 2.5 sim RF | 8 |
 
-- Seed price: 1 RF.
-- Expected harvest: exactly 0.85 RF / 85%.
-- Maximum harvest and reserve per seed: 2.5 RF.
+- Seed price: 1 sim RF.
+- Expected harvest: exactly 0.85 sim RF / 85%.
+- Maximum harvest and reserve per seed: 2.5 sim RF.
 - SDK preview prize stake: 25 sim RF (10× the maximum prize).
 - One seed produces exactly one bloom.
 - Kept blooms retain their fixed simulated liability with no expiry during the
@@ -159,11 +159,14 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
 - SDK build: pass.
 - `friendsdk check`: pass; weights 10,000 bps, expected reward 0.85 RF, maximum
   reward 2.5 RF.
-- Deterministic economy assertions: pass, including both sides of the 15-signal
-  bankroll edge: maximum 2.5 RF results still leave 2.5 sim RF of free prize stake,
-  while fifteen minimum 0.4 RF results still leave the player 11 sim RF from the
-  20 sim RF starting balance when blooms are harvested to reopen space.
-- Focused browser flow at 960, 760, 521 and 360 px: pass.
+- SDK-ledger bankroll stress test: pass. The same `game.json` is parsed through
+  FriendSDK and the actual preview ledger runs fifteen `buy → play → settle → redeem`
+  cycles at both outcome extremes. Fifteen 2.5 sim RF results still leave 2.5 sim RF
+  of free prize stake; fifteen 0.4 sim RF results still leave the player 11 sim RF
+  from the 20 sim RF starting balance.
+- Focused browser flow at 960, 760, 521 and 360 px: pass. The 960 px run also
+  fills all twelve plots, verifies the full-garden purchase block, harvests to
+  reopen space, and reaches the 15-signal EVERGREEN tier.
 - The browser flow covers verified runtime startup, canonical artwork, buy,
   confirmation, interrupted-settlement recovery with plot locking, same-tick
   double-click protection, post-action state-read retry and verified-refresh
