@@ -209,9 +209,12 @@ retain the real wallet and ownership gate. The hosted preview publishes
 [`SOURCE_COMMIT.txt`](https://raindogkitetu.github.io/friendsdk/SOURCE_COMMIT.txt)
 so the deployed build can be traced back to the exact source commit.
 
-The fork keeps FriendSDK v0.1.2 runtime/package/contracts unchanged from the official
-tag. Non-game changes are CI/deploy wiring plus test-only synchronization/readiness
-fixes; the runtime/package/contracts remain unchanged from the official tag.
+The fork keeps FriendSDK v0.1.2 runtime/package/contracts/assets and runtime build
+helpers unchanged from official release commit `762d6f58a73ace723f7f82dc1a61bfa036c21edc`. CI and deployment
+both run a direct protected-path diff against that commit before proceeding.
+Modified official test/workflow files carry fork-modification comments. The public
+preview ships the Apache LICENSE, FriendSDK NOTICE, Signal Garden NOTICE and retained
+bundle dependency-license comments.
 
 **Known limitations and wallet/fund risks**
 
