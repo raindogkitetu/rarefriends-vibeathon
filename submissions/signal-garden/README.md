@@ -56,11 +56,13 @@ also shows a clearly labeled current-protocol reference: the same gross activity
 split **50% burn / 50% rewards**, without claiming that either transfer occurred or
 that protocol rewards fund the preview's bloom payouts.
 
-For every 10 simulated Signal Seed purchases, the receipt exposes **10 sim RF gross
-activity, 8.5 sim RF expected preview harvest value, a 5 sim RF protocol-reference
-burn equivalent and a 5 sim RF protocol-reference rewards equivalent**. Every
-possible preview reward remains fully reserved at its published maximum. These are
-reference/model values, not live transfers.
+For every 10 simulated Signal Seed purchases, the preview payout model has **8.5
+sim RF expected bloom harvest**, while the separate current-protocol reference shows
+**5 sim-RF-equivalent burn + 5 sim-RF-equivalent rewards** for the same 10 sim RF
+gross activity. **These figures are not additive:** the 8.5 value is the preview
+player-payout expectation; the 5/5 values illustrate a separate routing rule. Every
+possible preview reward remains fully reserved at its published maximum, and no live
+transfer occurs.
 
 Repeat planting now also advances two **non-financial session goals** without
 changing RF odds or rewards: Bloom discovery remembers which of the four signals
@@ -158,8 +160,8 @@ This entry contains no live contract or transaction flow.
 Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI environment:
 
 - SDK build: pass.
-- `friendsdk check`: pass; weights 10,000 bps, expected reward 0.85 RF, maximum
-  reward 2.5 RF.
+- `friendsdk check`: pass; weights 10,000 bps, expected reward 0.85 sim RF, maximum
+  reward 2.5 sim RF.
 - SDK-ledger bankroll stress test: pass. The same `game.json` is parsed through
   FriendSDK and the actual preview ledger follows the real 12-slot garden order:
   keep the first twelve blooms, then harvest one before each of signals 13–15 to
