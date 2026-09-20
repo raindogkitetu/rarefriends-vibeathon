@@ -91,6 +91,8 @@ npm run dev:game -- games/signal-garden
 5. Fill twelve plots, or harvest blooms to reopen space and continue.
 6. Open **Simulated activity** (or **Guide → View activity receipt** on a narrow
    screen) to inspect cumulative RF activity and the proposed production split.
+7. On narrow screens, **Guide → View collection** keeps Bloom discovery reachable
+   even when the compact dock hides the Collection button.
 
 Mouse, touch and keyboard navigation work. The game is silent by design and includes
 a reduced-motion setting. Interrupted settlement is recoverable through **Resume
