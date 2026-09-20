@@ -38,9 +38,15 @@ clearly labeled as a future model; this submission does not claim a live burn.
 
 An in-game Token activity receipt makes the loop measurable: acquired seeds,
 signals planted, cumulative simulated RF spent, proposed burn and proposed vault
-allocation all update from the verified SDK ledger. Harvesting reopens a scarce
-plot while the gross-spend total remains, making repeat RF activity visible rather
-than reducing the loop to a net-balance snapshot.
+allocation all update from the verified SDK ledger. **Cumulative simulated RF spend
+also stays visible in the main HUD, including the 360 px layout, so Token Activity
+is visible before opening any menu.** Harvesting reopens a scarce plot while the
+gross-spend total remains, making repeat RF activity visible rather than reducing
+the loop to a net-balance snapshot.
+
+For every 10 simulated Signal Seeds, the model exposes **10 RF gross activity,
+8.5 RF expected harvest liability, 1 RF proposed burn and 0.5 RF proposed seasonal
+vault**. These are model values, not live transfers.
 
 **Source code**
 
