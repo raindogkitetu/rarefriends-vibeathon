@@ -121,6 +121,7 @@ Everything is simulated and labeled.
 - Seed price: 1 RF.
 - Expected harvest: exactly 0.85 RF / 85%.
 - Maximum harvest and reserve per seed: 2.5 RF.
+- SDK preview prize stake: 25 sim RF (10× the maximum prize).
 - One seed produces exactly one bloom.
 - Kept blooms retain their fixed simulated liability with no expiry during the
   runtime session.
@@ -158,7 +159,10 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
 - SDK build: pass.
 - `friendsdk check`: pass; weights 10,000 bps, expected reward 0.85 RF, maximum
   reward 2.5 RF.
-- Deterministic economy assertions: pass.
+- Deterministic economy assertions: pass, including a worst-case bankroll path
+  proving the 15-signal peak Resonance tier remains fundable from the initial
+  25 sim RF prize stake even if every result is the 2.5 RF maximum and each bloom
+  is immediately harvested to reopen space.
 - Focused browser flow at 960 px and 360 px: pass.
 - The browser flow covers verified runtime startup, canonical artwork, buy,
   confirmation, interrupted-settlement recovery with plot locking, same-tick
