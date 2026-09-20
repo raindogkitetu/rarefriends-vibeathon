@@ -183,6 +183,10 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
 The automated browser fixture is read-only and exists only in tests. Public builds
 retain the real wallet and ownership gate.
 
+The fork keeps FriendSDK v0.1.2 runtime/package/contracts unchanged from the official
+tag. Non-game changes are CI/deploy wiring plus a browser-test synchronization fix
+that waits for input to actually resume instead of relying on a fixed 150 ms delay.
+
 **Known limitations and wallet/fund risks**
 
 - All RF activity is simulated. The displayed 50% burn / 50% rewards values are
