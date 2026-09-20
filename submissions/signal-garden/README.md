@@ -178,9 +178,10 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
   reopen a slot. Fifteen 2.5 sim RF results still leave 2.5 sim RF of free prize
   stake; fifteen 0.4 sim RF results still leave the player 6.2 sim RF from the
   20 sim RF starting balance while twelve 0.4 sim RF blooms remain kept.
-- Focused browser flow at 960, 760, 521 and 360 px: pass. The 960 px run also
-  fills all twelve plots, verifies the full-garden purchase block, harvests to
-  reopen space, and reaches the 15-signal EVERGREEN tier.
+- Focused browser flow at 960, 760, 521 and 360 px: pass. The deterministic 960 px
+  run exercises all four bloom outcomes, reaches 4/4 Bloom discovery, fills all
+  twelve plots, verifies the full-garden purchase block, harvests to reopen space,
+  and reaches the 15-signal EVERGREEN tier.
 - The browser flow covers verified runtime startup, canonical artwork, buy,
   confirmation, interrupted-settlement recovery with plot locking, same-tick
   double-click protection, post-action state-read retry and verified-refresh
@@ -188,14 +189,19 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
   reveal, keep, inspect, harvest,
   cumulative token-activity accounting, Bloom discovery, Resonance, reduced motion
   and viewport bounds.
+- Child-frame reload recovery for kept inventory and an already-paid pending play:
+  pass.
+- Source/docs/browser/ledger consistency audit: pass.
 - Browser console, sandbox and unexpected-signing checks: pass.
 
 The automated browser fixture is read-only and exists only in tests. Public builds
-retain the real wallet and ownership gate.
+retain the real wallet and ownership gate. The hosted preview publishes
+[`SOURCE_COMMIT.txt`](https://raindogkitetu.github.io/friendsdk/SOURCE_COMMIT.txt)
+so the deployed build can be traced back to the exact source commit.
 
 The fork keeps FriendSDK v0.1.2 runtime/package/contracts unchanged from the official
-tag. Non-game changes are CI/deploy wiring plus a browser-test synchronization fix
-that waits for input to actually resume instead of relying on a fixed 150 ms delay.
+tag. Non-game changes are CI/deploy wiring plus test-only synchronization/readiness
+fixes; the runtime/package/contracts remain unchanged from the official tag.
 
 **Known limitations and wallet/fund risks**
 
