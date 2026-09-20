@@ -28,6 +28,11 @@ raindog_kitetu · X [@raindog_kitetu](https://x.com/raindog_kitetu) · GitHub [@
 
 Economy Potential (also relevant: Token Activity and Character Spotlight)
 
+Economy Potential is the primary category because the public submission is a
+wallet-gated **simulation**, not a live RF-burning deployment. Token Activity is a
+secondary, auditable signal through cumulative simulated spend and the separately
+labeled current-protocol routing reference; no live burn is claimed.
+
 **What did you build?**
 
 A personalized signal garden that grows around the player's verified Rare Friend.
