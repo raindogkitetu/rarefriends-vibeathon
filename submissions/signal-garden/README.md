@@ -211,7 +211,9 @@ so the deployed build can be traced back to the exact source commit.
 
 The fork keeps FriendSDK v0.1.2 runtime/package/contracts/assets and runtime build
 helpers unchanged from official release commit `762d6f58a73ace723f7f82dc1a61bfa036c21edc`. CI and deployment
-both run a direct protected-path diff against that commit before proceeding.
+both run a direct protected-path diff against that commit before proceeding. The
+preview deployment also runs on every `main` push and allowlists its complete
+published file set before pushing, so `SOURCE_COMMIT.txt` cannot silently lag main.
 Modified official test/workflow files carry fork-modification comments. The public
 preview ships the Apache LICENSE, FriendSDK NOTICE, Signal Garden NOTICE and retained
 bundle dependency-license comments.
