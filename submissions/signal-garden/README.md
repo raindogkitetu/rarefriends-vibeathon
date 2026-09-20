@@ -43,7 +43,8 @@ of the garden; family sets one of four bloom affinities; seed marks three glowin
 plots. Those traits affect non-financial harmony only and never alter the published
 reward table.
 
-Every planting is modeled as RF activity. The exact preview has an 85% expected
+Every simulated Seed purchase is modeled as RF activity; planting consumes the
+prepaid seed and does not charge RF a second time. The exact preview has an 85% expected
 harvest. A reviewed production economy would route the remaining 15% transparently:
 10% burned and 5% sent to a fully specified seasonal community vault. That split is
 clearly labeled as a future model; this submission does not claim a live burn.
@@ -127,7 +128,8 @@ Everything is simulated and labeled.
 
 **Production-economy potential**
 
-The proposed live split per 1 RF planting models 0.85 RF expected harvest value,
+The proposed live split per simulated 1 RF seed purchase models 0.85 RF expected
+harvest value,
 0.10 RF burned and 0.05 RF sent to a seasonal vault, while each possible reward
 would still require full maximum backing. The burn is proportional and
 predictable rather than dependent on a player's loss. Kept blooms make the Friend
@@ -136,9 +138,9 @@ space. Community seasons can later fund fully covered garden goals and opt-in
 exhibitions.
 
 The receipt tracks gross seed purchases, not net wallet movement. That makes the
-intended repeat-spend loop auditable at a glance: each new seed adds exactly 1 RF of
-simulated activity, 0.10 RF to the proposed burn counter and 0.05 RF to the proposed
-season-vault counter, even when an earlier bloom has been harvested.
+intended repeat-spend loop auditable at a glance: each Seed purchase adds exactly
+1 sim RF of activity, 0.10 sim RF to the proposed burn counter and 0.05 sim RF to
+the proposed season-vault counter, even when an earlier bloom has been harvested.
 
 FriendSDK v0.1.2 does not expose burn, season-vault, persistence or additional-item
 actions. The 85% harvest / 10% burn / 5% seasonal-vault split is therefore a
