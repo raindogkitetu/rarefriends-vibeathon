@@ -159,15 +159,16 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
 - SDK build: pass.
 - `friendsdk check`: pass; weights 10,000 bps, expected reward 0.85 RF, maximum
   reward 2.5 RF.
-- Deterministic economy assertions: pass, including a worst-case bankroll path
-  proving the 15-signal peak Resonance tier remains fundable from the initial
-  25 sim RF prize stake even if every result is the 2.5 RF maximum and each bloom
-  is immediately harvested to reopen space.
-- Focused browser flow at 960 px and 360 px: pass.
+- Deterministic economy assertions: pass, including both sides of the 15-signal
+  bankroll edge: maximum 2.5 RF results still leave 2.5 sim RF of free prize stake,
+  while fifteen minimum 0.4 RF results still leave the player 11 sim RF from the
+  20 sim RF starting balance when blooms are harvested to reopen space.
+- Focused browser flow at 960, 760, 521 and 360 px: pass.
 - The browser flow covers verified runtime startup, canonical artwork, buy,
   confirmation, interrupted-settlement recovery with plot locking, same-tick
   double-click protection, post-action state-read retry and verified-refresh
-  blocking, visible phone-width action errors, reveal, keep, inspect, harvest,
+  blocking, visible non-blocking phone-width action errors, responsive breakpoints,
+  reveal, keep, inspect, harvest,
   cumulative token-activity accounting, Bloom discovery, Resonance, reduced motion
   and viewport bounds.
 - Browser console, sandbox and unexpected-signing checks: pass.
