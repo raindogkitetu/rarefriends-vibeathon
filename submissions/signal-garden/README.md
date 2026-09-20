@@ -6,6 +6,12 @@
 
 Signal Garden
 
+**One sentence**
+
+Grow a personalized signal garden around your verified Rare Friend, where every
+simulated 1 RF seed creates measurable repeat token activity while Friend-specific
+traits shape non-financial garden strategy.
+
 **Builder / contact**
 
 raindog_kitetu · X [@raindog_kitetu](https://x.com/raindog_kitetu) · GitHub [@raindogkitetu](https://github.com/raindogkitetu)
@@ -55,7 +61,7 @@ signals. Both reset with the runtime session.
 
 **Source code**
 
-[https://github.com/raindogkitetu/friendsdk](https://github.com/raindogkitetu/friendsdk) · FriendSDK v0.1.2 · game path: `games/signal-garden`
+[Signal Garden source](https://github.com/raindogkitetu/friendsdk/tree/main/games/signal-garden) · FriendSDK v0.1.2
 
 **Playable demo / how to run**
 
