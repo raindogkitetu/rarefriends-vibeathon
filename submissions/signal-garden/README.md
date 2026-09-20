@@ -182,7 +182,8 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
   run exercises all four bloom outcomes, reaches 4/4 Bloom discovery, fills all
   twelve plots, verifies the full-garden purchase block, harvests to reopen space,
   and reaches the 15-signal EVERGREEN tier.
-- The browser flow covers verified runtime startup, canonical artwork, buy,
+- The browser flow covers verified runtime startup, canonical artwork, explicit
+  keyboard activation, real touch activation, accessible button/canvas labeling, buy,
   confirmation, interrupted-settlement recovery with plot locking, same-tick
   double-click protection, post-action state-read retry and verified-refresh
   blocking, visible non-blocking phone-width action errors, responsive breakpoints,
