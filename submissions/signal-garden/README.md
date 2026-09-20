@@ -140,7 +140,7 @@ This entry contains no live contract or transaction flow.
 
 **What have you tested?**
 
-Run on 2026-09-20 with FriendSDK v0.1.2 and Node.js 24:
+Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI environment:
 
 - SDK build: pass.
 - `friendsdk check`: pass; weights 10,000 bps, expected reward 0.85 RF, maximum
@@ -149,7 +149,8 @@ Run on 2026-09-20 with FriendSDK v0.1.2 and Node.js 24:
 - Focused browser flow at 960 px and 360 px: pass.
 - The browser flow covers verified runtime startup, canonical artwork, buy,
   confirmation, interrupted-settlement recovery, reveal, keep, inspect, harvest,
-  cumulative token-activity accounting, reduced motion and viewport bounds.
+  cumulative token-activity accounting, Bloom discovery, Resonance, reduced motion
+  and viewport bounds.
 - Browser console, sandbox and unexpected-signing checks: pass.
 
 The automated browser fixture is read-only and exists only in tests. Public builds
