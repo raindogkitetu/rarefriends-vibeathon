@@ -160,9 +160,17 @@ erasing prior activity.
 
 FriendSDK v0.1.2 does not expose burn/reward-routing, persistence or additional-item
 actions. The preview therefore performs **no live burn and no live reward routing**.
-The protocol reward half is not claimed to fund player bloom payouts. Any live Signal
-Garden version would require a separately funded payout reserve, explicit wallet
-confirmations, published rules and review against the then-current protocol mechanics.
+The protocol reward half is not claimed to fund player bloom payouts. The 85% preview
+return is not a drop-in production payout table: even if the entire current 0.5 RF
+rewards half of a 1 RF gameplay payment were hypothetically available for this
+game's player payouts, 0.85 RF expected payout would still leave a **0.35 RF expected
+gap per Seed**. This submission does not assume that reward half is available.
+
+A live version must either pre-fund a separate reserve/subsidy that covers its chosen
+expected payout plus every maximum-prize liability, or reprice/reweight the live
+reward table to fit the then-current protocol allocation. Sales must stop before the
+reserve cannot fully back the next maximum prize. Explicit wallet confirmations,
+published rules and production review remain required.
 
 **Potential paired-asset path — not implemented:** the Vibeathon describes future
 token economies that can introduce a separate asset and pair it with $RAREFRIENDS.
@@ -191,8 +199,9 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
   run exercises all four bloom outcomes, reaches 4/4 Bloom discovery, fills all
   twelve plots, verifies the full-garden purchase block, harvests to reopen space,
   and reaches the 15-signal EVERGREEN tier.
-- The browser flow covers verified runtime startup, canonical artwork, explicit
-  keyboard activation, real touch activation, accessible button/canvas labeling, buy,
+- The browser flow covers verified runtime startup, canonical artwork, visible
+  keyboard focus/activation, real touch Seed purchase and planting, accessible
+  button/canvas labeling, buy,
   confirmation, interrupted-settlement recovery with plot locking, same-tick
   double-click protection, post-action state-read retry and verified-refresh
   blocking, visible non-blocking phone-width action errors, responsive breakpoints,
@@ -201,6 +210,7 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
   24 px minimum game touch targets, accessible plot grouping and viewport bounds.
 - Child-frame reload recovery for kept inventory and an already-paid pending play:
   pass.
+- Initial artwork/RPC load failure → visible Retry → successful recovery: pass.
 - Source/docs/browser/ledger consistency audit: pass.
 - Browser console, sandbox and unexpected-signing checks: pass.
 
