@@ -210,7 +210,7 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
   24 px minimum game touch targets, accessible plot grouping and viewport bounds.
 - Child-frame reload recovery for kept inventory and an already-paid pending play:
   pass.
-- Initial verified-state load failure → visible Retry → successful recovery: pass.
+- Initial canonical-artwork RPC failure → visible in-game Retry → successful recovery while the parent SDK runtime remains ready: pass.
 - Source/docs/browser/ledger consistency audit: pass.
 - Browser console, sandbox and unexpected-signing checks: pass.
 
