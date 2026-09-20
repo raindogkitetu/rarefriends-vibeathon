@@ -163,6 +163,15 @@ actions. The preview therefore performs **no live burn and no live reward routin
 The protocol reward half is not claimed to fund player bloom payouts. Any live Signal
 Garden version would require a separately funded payout reserve, explicit wallet
 confirmations, published rules and review against the then-current protocol mechanics.
+
+**Potential paired-asset path — not implemented:** the Vibeathon describes future
+token economies that can introduce a separate asset and pair it with $RAREFRIENDS.
+A reviewed season could make persistent Bloom or habitat assets a separate layer:
+RF gameplay payments would still follow then-current protocol routing; asset issuance,
+the RF market pair and any creator/trading-fee rules would require their own published
+contract and audit; and any redeemable player payout would stay separately funded.
+This submission does **not** deploy, mint, pair or trade such an asset.
+
 This entry contains no live contract or transaction flow.
 
 **What have you tested?**
@@ -188,8 +197,8 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
   double-click protection, post-action state-read retry and verified-refresh
   blocking, visible non-blocking phone-width action errors, responsive breakpoints,
   reveal, keep, inspect, harvest,
-  cumulative token-activity accounting, Bloom discovery, Resonance, reduced motion
-  and viewport bounds.
+  cumulative token-activity accounting, Bloom discovery, Resonance, reduced motion,
+  24 px minimum game touch targets, accessible plot grouping and viewport bounds.
 - Child-frame reload recovery for kept inventory and an already-paid pending play:
   pass.
 - Source/docs/browser/ledger consistency audit: pass.
