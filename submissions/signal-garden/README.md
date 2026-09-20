@@ -96,7 +96,8 @@ npm run dev:game -- games/signal-garden
 
 Mouse, touch and keyboard navigation work. The game is silent by design and includes
 a reduced-motion setting. Interrupted settlement is recoverable through **Resume
-signal** without purchasing or consuming a second seed.
+signal** without purchasing or consuming a second seed; while the game frame stays
+mounted, the recovered result returns to the plot the player originally selected.
 
 **Costs and rewards**
 
@@ -161,9 +162,11 @@ retain the real wallet and ownership gate.
 **Known limitations and wallet/fund risks**
 
 - All RF activity and the proposed 10% burn / 5% vault split are simulated.
-- Garden placement is session-local because the SDK has no persistence API. A child
-  frame reload rebuilds visible blooms from host inventory but not their old plots;
-  a full runtime reload resets the preview.
+- Garden placement is session-local because the SDK has no persistence API.
+  Pending recovery preserves the intended plot while the current game frame stays
+  mounted. If that frame reloads, a recovered pending signal must be assigned to an
+  empty plot again; kept blooms rebuild from host inventory without their old plots.
+  A full runtime reload resets the preview.
 - Trading, swaps, creator fees, wearables, additional currencies and live upgrades
   are not implemented.
 - Connecting reads wallet identity and owned Friends. The game has no signer,
