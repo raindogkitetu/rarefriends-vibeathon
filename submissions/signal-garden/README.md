@@ -12,7 +12,7 @@ Signal Garden
 **One sentence**
 
 Grow a personalized signal garden around your verified Rare Friend, where every
-simulated 1 RF seed creates measurable repeat token activity while Friend-specific
+simulated 1 RF Seed purchase creates measurable repeat token activity while Friend-specific
 traits shape non-financial garden strategy.
 
 **Builder / contact**
@@ -26,7 +26,7 @@ Economy Potential (also relevant: Token Activity and Character Spotlight)
 **What did you build?**
 
 A personalized signal garden that grows around the player's verified Rare Friend.
-Buy a simulated 1 RF Signal Seed, choose one of twelve plots, reveal a bloom, then
+Buy a simulated 1 RF Signal Seed, then choose one of twelve plots, reveal a bloom, then
 keep it for harmony or harvest its fixed RF value. The Friend's real on-chain family
 and art seed determine its bloom affinity and three signal plots, so the selected
 Friend directly affects non-financial garden strategy without changing RF odds.
@@ -63,7 +63,7 @@ vault**. Every possible reward remains fully reserved at its published maximum. 
 
 Repeat planting now also advances two **non-financial session goals** without
 changing RF odds or rewards: Bloom discovery remembers which of the four signals
-have appeared even after harvest, and Resonance advances at 3, 6, 12 and 24 settled
+have appeared even after harvest, and Resonance advances at 3, 6, 12 and 15 settled
 signals. Both reset with the runtime session.
 
 **Source code**
