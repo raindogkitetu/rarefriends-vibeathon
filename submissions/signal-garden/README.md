@@ -153,8 +153,9 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
 - Deterministic economy assertions: pass.
 - Focused browser flow at 960 px and 360 px: pass.
 - The browser flow covers verified runtime startup, canonical artwork, buy,
-  confirmation, interrupted-settlement recovery with plot locking, post-action
-  state-read retry and verified-refresh blocking, reveal, keep, inspect, harvest,
+  confirmation, interrupted-settlement recovery with plot locking, same-tick
+  double-click protection, post-action state-read retry and verified-refresh
+  blocking, visible phone-width action errors, reveal, keep, inspect, harvest,
   cumulative token-activity accounting, Bloom discovery, Resonance, reduced motion
   and viewport bounds.
 - Browser console, sandbox and unexpected-signing checks: pass.
@@ -169,7 +170,9 @@ retain the real wallet and ownership gate.
   Pending recovery preserves the intended plot while the current game frame stays
   mounted. If that frame reloads, a recovered pending signal must be assigned to an
   empty plot again; kept blooms rebuild from host inventory without their old plots.
-  A full runtime reload resets the preview.
+  Because harmony has plot-specific non-financial bonuses, that reconstructed harmony
+  score may also differ after a child-frame reload. A full runtime reload resets the
+  preview.
 - Trading, swaps, creator fees, wearables, additional currencies and live upgrades
   are not implemented.
 - Connecting reads wallet identity and owned Friends. The game has no signer,
