@@ -44,22 +44,23 @@ plots. Those traits affect non-financial harmony only and never alter the publis
 reward table.
 
 Every simulated Seed purchase is modeled as RF activity; planting consumes the
-prepaid seed and does not charge RF a second time. The exact preview has an 85% expected
-harvest. A reviewed production economy would route the remaining 15% transparently:
-10% burned and 5% sent to a fully specified seasonal community vault. That split is
-clearly labeled as a future model; this submission does not claim a live burn.
+prepaid seed and does not charge RF a second time. The exact preview has an 85%
+expected simulated harvest, but that payout table is separate from production
+payment routing.
 
 An in-game Token activity receipt makes the loop measurable: acquired seeds,
-signals planted, cumulative simulated RF spent, proposed burn and proposed vault
-allocation all update from the verified SDK ledger. **Cumulative simulated RF spend
-also stays visible in the main HUD, including the 360 px layout, so Token Activity
-is visible before opening any menu.** Harvesting reopens a scarce plot while the
-gross-spend total remains, making repeat RF activity visible rather than reducing
-the loop to a net-balance snapshot.
+signals planted and cumulative simulated RF spent all update from the verified SDK
+ledger. **Cumulative simulated RF spend also stays visible in the main HUD, including
+the 360 px layout, so Token Activity is visible before opening any menu.** The receipt
+also shows a clearly labeled current-protocol reference: the same gross activity
+split **50% burn / 50% rewards**, without claiming that either transfer occurred or
+that protocol rewards fund the preview's bloom payouts.
 
-For every 10 simulated Signal Seed purchases, the model exposes **10 sim RF gross
-activity, 8.5 sim RF expected harvest value, a 1 sim RF proposed-burn equivalent
-and a 0.5 sim RF proposed seasonal-vault equivalent**. Every possible reward remains fully reserved at its published maximum. These are model values, not live transfers.
+For every 10 simulated Signal Seed purchases, the receipt exposes **10 sim RF gross
+activity, 8.5 sim RF expected preview harvest value, a 5 sim RF protocol-reference
+burn equivalent and a 5 sim RF protocol-reference rewards equivalent**. Every
+possible preview reward remains fully reserved at its published maximum. These are
+reference/model values, not live transfers.
 
 Repeat planting now also advances two **non-financial session goals** without
 changing RF odds or rewards: Bloom discovery remembers which of the four signals
@@ -97,7 +98,7 @@ npm run dev:game -- games/signal-garden
 4. Keep it for harmony or harvest its fixed simulated RF value.
 5. Fill twelve plots, or harvest blooms to reopen space and continue.
 6. Open **Simulated activity** (or **Guide → View activity receipt** on a narrow
-   screen) to inspect cumulative RF activity and the proposed production split.
+   screen) to inspect cumulative RF activity and the current 50/50 protocol reference.
 7. On narrow screens, **Guide → View collection** keeps Bloom discovery reachable
    even when the compact dock hides the Collection button.
 
@@ -129,27 +130,27 @@ Everything is simulated and labeled.
 
 **Production-economy potential**
 
-The proposed live split per simulated 1 RF seed purchase models 0.85 RF expected
-harvest value,
-0.10 RF burned and 0.05 RF sent to a seasonal vault, while each possible reward
-would still require full maximum backing. The burn is proportional and
-predictable rather than dependent on a player's loss. Kept blooms make the Friend
-visibly personal; harvesting returns the disclosed value and reopens scarce garden
-space. Community seasons can later fund fully covered garden goals and opt-in
-exhibitions.
+Signal Garden separates three things that could otherwise be confused:
 
-The receipt tracks gross seed purchases, not net wallet movement. That makes the
-intended repeat-spend loop auditable at a glance: each Seed purchase adds exactly
-1 sim RF of activity, 0.10 sim RF to the proposed burn counter and 0.05 sim RF to
-the proposed season-vault counter, even when an earlier bloom has been harvested.
+1. **Gross simulated activity.** Each Seed purchase adds exactly 1 sim RF to the
+   cumulative activity counter. Planting consumes that prepaid Seed and does not
+   charge a second time.
+2. **Preview payout table.** Bloom harvests have a fixed, fully disclosed 85% expected
+   simulated value with a 2.5 sim RF maximum, backed by the SDK preview stake.
+3. **Current protocol reference.** Rare Friends' current
+   [$RAREFRIENDS documentation](https://rarefriends.com/docs/rarefriends) describes
+   general gameplay payments as **50% burn / 50% rewards**. The receipt shows that
+   50/50 reference separately from the preview payout table.
 
-FriendSDK v0.1.2 does not expose burn, season-vault, persistence or additional-item
-actions. The 85% harvest / 10% burn / 5% seasonal-vault split is therefore a
-**Signal Garden prototype model**, not a description of current Rare Friends
-protocol routing. Rare Friends' current [$RAREFRIENDS documentation](https://rarefriends.com/docs/rarefriends)
-describes general gameplay payments as **50% burn / 50% rewards**; any live Signal Garden version
-would need to be redesigned and reviewed against the then-current protocol rules,
-with funded reserves, explicit wallet confirmations and published season rules.
+The receipt tracks gross Seed purchases, not net wallet movement, so harvesting to
+reopen space and repurchasing makes repeat simulated RF usage auditable rather than
+erasing prior activity.
+
+FriendSDK v0.1.2 does not expose burn/reward-routing, persistence or additional-item
+actions. The preview therefore performs **no live burn and no live reward routing**.
+The protocol reward half is not claimed to fund player bloom payouts. Any live Signal
+Garden version would require a separately funded payout reserve, explicit wallet
+confirmations, published rules and review against the then-current protocol mechanics.
 This entry contains no live contract or transaction flow.
 
 **What have you tested?**
@@ -182,7 +183,8 @@ retain the real wallet and ownership gate.
 
 **Known limitations and wallet/fund risks**
 
-- All RF activity and the proposed 10% burn / 5% vault split are simulated.
+- All RF activity is simulated. The displayed 50% burn / 50% rewards values are
+  current-protocol reference values only; no live burn or reward routing occurs.
 - Garden placement is session-local because the SDK has no persistence API.
   Pending recovery preserves the intended plot while the current game frame stays
   mounted. If that frame reloads, a recovered pending signal must be assigned to an
