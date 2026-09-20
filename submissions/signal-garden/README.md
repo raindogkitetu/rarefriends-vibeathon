@@ -132,8 +132,8 @@ season-vault counter, even when an earlier bloom has been harvested.
 FriendSDK v0.1.2 does not expose burn, season-vault, persistence or additional-item
 actions. The 85% harvest / 10% burn / 5% seasonal-vault split is therefore a
 **Signal Garden prototype model**, not a description of current Rare Friends
-protocol routing. Rare Friends' current token documentation describes general
-gameplay payments as **50% burn / 50% rewards**; any live Signal Garden version
+protocol routing. Rare Friends' current [$RAREFRIENDS documentation](https://rarefriends.com/docs/rarefriends)
+describes general gameplay payments as **50% burn / 50% rewards**; any live Signal Garden version
 would need to be redesigned and reviewed against the then-current protocol rules,
 with funded reserves, explicit wallet confirmations and published season rules.
 This entry contains no live contract or transaction flow.
