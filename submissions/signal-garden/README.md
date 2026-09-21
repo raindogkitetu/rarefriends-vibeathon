@@ -19,6 +19,13 @@ preview still requires the real wallet, Robinhood network and fresh Friend-owner
   consecutive Seed purchases filled all twelve plots; HUD showed 8 sim RF remaining
   and 12 sim RF spent; the receipt matched at 12 Seeds acquired / 12 signals planted
   with separate 6 / 6 sim-RF-equivalent 50% burn / 50% rewards protocol references.
+  A later public-preview screenshot from the same Friend shows **Garden Full**,
+  **Harmony 57**, **Collection 3/4** and **Resonance HARMONIC** alongside those
+  8 / 12 HUD totals.
+- The frame's **Local preview** badge is FriendSDK v0.1.2's own label for
+  `mode === "preview"`; the hosted GitHub Pages build intentionally retains the
+  unmodified official runtime terminology. It does **not** mean the screenshot was
+  taken from localhost.
 
 **Project name**
 
