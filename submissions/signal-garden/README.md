@@ -12,6 +12,14 @@ preview still requires the real wallet, Robinhood network and fresh Friend-owner
 
 **Real-wallet public-preview verification (2026-09-21)**
 
+![Real-wallet desktop public-preview verification with Friend #87846](media/real-wallet-garden-full-2026-09-21.png)
+
+*Desktop Brave + MetaMask public-preview verification with freshly verified Friend
+#87846. Twelve Seed purchases filled all twelve plots; HUD shows 8 sim RF remaining
+and 12 sim RF spent. Garden Full, Harmony 57, Collection 3/4 and HARMONIC resonance
+are visible. The SDK frame's "Local preview" badge is FriendSDK v0.1.2's standard
+preview-mode label. The user-provided game-only screenshot is reproduced unchanged.*
+
 - **iPhone + MetaMask in-app browser:** freshly verified Generations Friend #20838;
   touch Seed purchase and planting passed; HUD and receipt matched at 1 sim RF spent,
   1 Seed acquired and 1 signal planted; no transaction or signature prompt appeared.
