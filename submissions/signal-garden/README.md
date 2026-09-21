@@ -213,6 +213,12 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
 - Initial canonical-artwork RPC failure → visible in-game Retry → successful recovery while the parent SDK runtime remains ready: pass.
 - Source/docs/browser/ledger consistency audit: pass.
 - Browser console, sandbox and unexpected-signing checks: pass.
+- Manual public-deployment check on 2026-09-21: pass on an iPhone running
+  iOS 26.7 in the MetaMask mobile in-app browser, using freshly verified
+  Generations Friend #20838. A 1 sim RF Seed purchase and touch placement
+  completed successfully; the HUD and Token activity receipt agreed on
+  1 sim RF spent, 1 Seed acquired and 1 signal planted. No live transaction
+  or signature prompt appeared.
 
 The automated browser fixture is read-only and exists only in tests. Public builds
 retain the real wallet and ownership gate. The hosted preview publishes
@@ -238,7 +244,9 @@ bundle dependency-license comments.
   empty plot again; kept blooms rebuild from host inventory without their old plots.
   Because harmony has plot-specific non-financial bonuses, that reconstructed harmony
   score may also differ after a child-frame reload. A full runtime reload resets the
-  preview.
+  preview. On iOS, backgrounding a wallet's in-app browser can cause that full
+  runtime reload, so the wallet tab should remain foregrounded during a preview
+  session.
 - Trading, swaps, creator fees, wearables, additional currencies and live upgrades
   are not implemented.
 - Connecting reads wallet identity and owned Friends. The game has no signer,
