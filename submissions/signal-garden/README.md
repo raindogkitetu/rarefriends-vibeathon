@@ -219,6 +219,12 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
   completed successfully; the HUD and Token activity receipt agreed on
   1 sim RF spent, 1 Seed acquired and 1 signal planted. No live transaction
   or signature prompt appeared.
+- A second manual public-deployment check on 2026-09-21 passed in desktop
+  Brave with the MetaMask extension and freshly verified Generations Friend
+  #87846. Twelve consecutive Seed purchases filled all twelve plots; the HUD
+  showed 12 sim RF spent and the Token activity receipt matched with 12 Seeds
+  acquired, 12 signals planted and separate 6 / 6 sim-RF-equivalent protocol
+  reference values for the 50% burn / 50% rewards split.
 
 The automated browser fixture is read-only and exists only in tests. Public builds
 retain the real wallet and ownership gate. The hosted preview publishes
