@@ -106,7 +106,7 @@ signals. Both reset with the runtime session.
 
 **Source code**
 
-[Signal Garden source](https://github.com/raindogkitetu/friendsdk/tree/main/games/signal-garden) · FriendSDK v0.1.2
+[Signal Garden source](https://github.com/raindogkitetu/friendsdk/tree/main/games/signal-garden) · FriendSDK v0.1.3
 
 **Playable demo / how to run**
 
@@ -183,7 +183,7 @@ The receipt tracks gross Seed purchases, not net wallet movement, so harvesting 
 reopen space and repurchasing makes repeat simulated RF usage auditable rather than
 erasing prior activity.
 
-FriendSDK v0.1.2 does not expose burn/reward-routing, persistence or additional-item
+FriendSDK v0.1.3 does not expose burn/reward-routing, persistence or additional-item
 actions. The preview therefore performs **no live burn and no live reward routing**.
 The protocol reward half is not claimed to fund player bloom payouts. The 85% preview
 return is not a drop-in production payout table: even if the entire current 0.5 RF
@@ -209,9 +209,13 @@ This entry contains no live contract or transaction flow.
 
 **What have you tested?**
 
-Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI environment:
+Automated verification re-run on 2026-09-29 with FriendSDK v0.1.3 in the Node.js 22 deployment/CI environment:
 
 - SDK build: pass.
+- Official v0.1.3 protected-runtime integrity diff against `f34f4058ed4b4f78ae21fdd22084f0aee6993c6b`: pass.
+- SDK JavaScript tests: 118 pass, 0 fail, 0 skipped.
+- Contract tests: 16 pass, 0 fail, 1 mainnet-fork-dependent skip.
+- Typecheck and full SDK browser suite: pass.
 - `friendsdk check`: pass; weights 10,000 bps, expected reward 0.85 sim RF, maximum
   reward 2.5 sim RF.
 - SDK-ledger bankroll stress test: pass. The same `game.json` is parsed through
@@ -238,6 +242,7 @@ Verified on 2026-09-20 with FriendSDK v0.1.2 in the Node.js 22 deployment/CI env
 - Initial canonical-artwork RPC failure → visible in-game Retry → successful recovery while the parent SDK runtime remains ready: pass.
 - Source/docs/browser/ledger consistency audit: pass.
 - Browser console, sandbox and unexpected-signing checks: pass.
+- The v0.1.3 public preview was rebuilt and published by GitHub Actions on 2026-09-29 from source commit `1cb3ea5469842aacb2a0159230072ce0189b5ac6`. The manual real-wallet checks below are retained from 2026-09-21 on the prior v0.1.2 build and are not relabeled as v0.1.3 manual verification.
 - Manual public-deployment check on 2026-09-21: pass on an iPhone running
   iOS 26.7 in the MetaMask mobile in-app browser, using freshly verified
   Generations Friend #20838. A 1 sim RF Seed purchase and touch placement
@@ -256,8 +261,8 @@ retain the real wallet and ownership gate. The hosted preview publishes
 [`SOURCE_COMMIT.txt`](https://raindogkitetu.github.io/friendsdk/SOURCE_COMMIT.txt)
 so the deployed build can be traced back to the exact source commit.
 
-The fork keeps FriendSDK v0.1.2 runtime/package/contracts/assets and runtime build
-helpers unchanged from official release commit `762d6f58a73ace723f7f82dc1a61bfa036c21edc`. CI and deployment
+The fork keeps FriendSDK v0.1.3 runtime/package/contracts/assets and runtime build
+helpers unchanged from official release commit `f34f4058ed4b4f78ae21fdd22084f0aee6993c6b`. CI and deployment
 both run a direct protected-path diff against that commit before proceeding. The
 preview deployment also runs on every `main` push and allowlists its complete
 published file set before pushing, so `SOURCE_COMMIT.txt` cannot silently lag main.
@@ -286,7 +291,7 @@ bundle dependency-license comments.
 
 **Credits**
 
-Built with FriendSDK v0.1.2 (Apache-2.0 source license and repository artwork
+Built with FriendSDK v0.1.3 (Apache-2.0 source license and repository artwork
 notice): runtime, wallet/Friend verification, canonical Generations art reader,
 sandbox bridge and simulated ledger. Signal Garden's UI, bloom vectors, rules,
 scoring and economy model are original. No external assets beyond the credited
