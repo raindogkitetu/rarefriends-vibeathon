@@ -118,7 +118,7 @@ signals. Both reset with the runtime session.
 > `1cb3ea5469842aacb2a0159230072ce0189b5ac6`; the v0.1.3 build, full browser suite
 > and Signal Garden checks all pass. A MetaMask blocklist-removal review is open at
 > [MetaMask/eth-phishing-detect #298279](https://github.com/MetaMask/eth-phishing-detect/issues/298279),
-> and a false-positive review was also submitted to Blockaid. The Brave warning is being tracked separately. Reviewers
+> and a false-positive review was also submitted to Blockaid. The Brave warning is tracked in [brave/brave-browser #59436](https://github.com/brave/brave-browser/issues/59436). Reviewers
 > who do not wish to bypass a wallet warning can use the real-wallet verification
 > screenshot above together with the public source and CI evidence below. No live RF
 > burn, live reward routing or live gameplay transaction is performed by this preview.
