@@ -112,6 +112,17 @@ signals. Both reset with the runtime session.
 
 [https://raindogkitetu.github.io/friendsdk/](https://raindogkitetu.github.io/friendsdk/)
 
+> **Security-warning review note (2026-09-29):** MetaMask and Brave currently show a
+> malicious/phishing warning for this GitHub Pages preview. The deployed
+> `SOURCE_COMMIT.txt` matches tested source commit
+> `1cb3ea5469842aacb2a0159230072ce0189b5ac6`; the v0.1.3 build, full browser suite
+> and Signal Garden checks all pass. A MetaMask blocklist-removal review is open at
+> [MetaMask/eth-phishing-detect #298279](https://github.com/MetaMask/eth-phishing-detect/issues/298279),
+> and false-positive reviews were also submitted to Blockaid and Blowfish. Reviewers
+> who do not wish to bypass a wallet warning can use the real-wallet verification
+> screenshot above together with the public source and CI evidence below. No live RF
+> burn, live reward routing or live gameplay transaction is performed by this preview.
+
 The hosted preview requires a browser wallet on Robinhood mainnet (chain 4663)
 holding a hardwired Generations NFT, generation 1 or higher. The SDK freshly verifies
 ownership before mounting the game. Preview balances and results are simulated; no
