@@ -7,7 +7,7 @@
 >
 > - **Current source/deploy commit:** `d020a37ee4567eb1d20d9acdcf40a44e45d8d446`
 > - **Official FriendSDK baseline:** v0.1.4 / `ca3bf183b809ecf22d87c63d88ce03969a3f8da2`
-> - **Pre-merge SDK and game checks #99:** SUCCESS
+> - **Final SDK and game checks #100:** SUCCESS
 > - **Final Signal Garden preview deploy #75:** SUCCESS
 > - **Automated browser flows:** 960 / 760 / 521 / 360 px PASS
 > - **JS tests:** 118 pass / 0 fail
@@ -15,7 +15,7 @@
 > - **Judge-safe static review:** https://raindogkitetu.github.io/friendsdk/judge.html
 > - **Playable preview:** https://raindogkitetu.github.io/friendsdk/
 > - **Source:** https://github.com/raindogkitetu/friendsdk/tree/main/games/signal-garden
-> - **CI:** https://github.com/raindogkitetu/friendsdk/actions/runs/36729666450
+> - **CI:** https://github.com/raindogkitetu/friendsdk/actions/runs/36730191500
 > - **Deploy:** https://github.com/raindogkitetu/friendsdk/actions/runs/36730191258
 >
 > The warning is being tracked as a false-positive with MetaMask and Brave. Signal Garden
