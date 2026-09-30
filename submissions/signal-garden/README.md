@@ -1,5 +1,26 @@
 # Signal Garden
 
+> **Judge-safe review path (2026-09-30):** The playable GitHub Pages preview is currently
+> triggering an external wallet/security false-positive warning in MetaMask and Brave.
+> The current build itself is verified and deployed successfully. Reviewers who do not
+> want to bypass that warning can still evaluate the submission from the evidence below:
+>
+> - **Current source/deploy commit:** `25cd30f34b944646fe2aec7e234d1d7dffcd6db0`
+> - **Official FriendSDK baseline:** v0.1.4 / `ca3bf183b809ecf22d87c63d88ce03969a3f8da2`
+> - **SDK and game checks #89:** SUCCESS
+> - **Signal Garden preview deploy #73:** SUCCESS
+> - **Automated browser flows:** 960 / 760 / 521 / 360 px PASS
+> - **JS tests:** 118 pass / 0 fail
+> - **Contract tests:** 16 pass / 0 fail / 1 mainnet-fork-dependent skip
+> - **Playable preview:** https://raindogkitetu.github.io/friendsdk/
+> - **Source:** https://github.com/raindogkitetu/friendsdk/tree/main/games/signal-garden
+> - **CI:** https://github.com/raindogkitetu/friendsdk/actions/runs/36725861145
+> - **Deploy:** https://github.com/raindogkitetu/friendsdk/actions/runs/36725861467
+>
+> The warning is being tracked as a false-positive with MetaMask and Brave. Signal Garden
+> performs no live RF burn, live reward routing or live gameplay transaction.
+
+
 > **Current economy note:** this README is the canonical current submission. The
 > current design uses the Rare Friends **50% burn / 50% rewards** gameplay-payment
 > rule only as a clearly labeled protocol reference. Any earlier PR-description
