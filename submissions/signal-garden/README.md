@@ -5,20 +5,25 @@
 > The current build itself is verified and deployed successfully. Reviewers who do not
 > want to bypass that warning can still evaluate the submission from the evidence below:
 >
-> - **Current source/deploy commit:** `25cd30f34b944646fe2aec7e234d1d7dffcd6db0`
+> - **Current source/deploy commit:** `d020a37ee4567eb1d20d9acdcf40a44e45d8d446`
 > - **Official FriendSDK baseline:** v0.1.4 / `ca3bf183b809ecf22d87c63d88ce03969a3f8da2`
-> - **SDK and game checks #89:** SUCCESS
-> - **Signal Garden preview deploy #73:** SUCCESS
+> - **Pre-merge SDK and game checks #99:** SUCCESS
+> - **Final Signal Garden preview deploy #75:** SUCCESS
 > - **Automated browser flows:** 960 / 760 / 521 / 360 px PASS
 > - **JS tests:** 118 pass / 0 fail
 > - **Contract tests:** 16 pass / 0 fail / 1 mainnet-fork-dependent skip
+> - **Judge-safe static review:** https://raindogkitetu.github.io/friendsdk/judge.html
 > - **Playable preview:** https://raindogkitetu.github.io/friendsdk/
 > - **Source:** https://github.com/raindogkitetu/friendsdk/tree/main/games/signal-garden
-> - **CI:** https://github.com/raindogkitetu/friendsdk/actions/runs/36725861145
-> - **Deploy:** https://github.com/raindogkitetu/friendsdk/actions/runs/36725861467
+> - **CI:** https://github.com/raindogkitetu/friendsdk/actions/runs/36729666450
+> - **Deploy:** https://github.com/raindogkitetu/friendsdk/actions/runs/36730191258
 >
 > The warning is being tracked as a false-positive with MetaMask and Brave. Signal Garden
 > performs no live RF burn, live reward routing or live gameplay transaction.
+>
+> **Submission note:** the upstream PR description may still show the earlier v0.1.3
+> verification snapshot because the current integration cannot edit that upstream PR body.
+> This README and the current PR head are the canonical, current v0.1.4 submission.
 
 
 > **Current economy note:** this README is the canonical current submission. The
@@ -136,7 +141,7 @@ signals. Both reset with the runtime session.
 > **Security-warning review note (2026-09-29):** MetaMask and Brave currently show a
 > malicious/phishing warning for this GitHub Pages preview. The deployed
 > `SOURCE_COMMIT.txt` matches tested source commit
-> `25cd30f34b944646fe2aec7e234d1d7dffcd6db0`; the v0.1.4 build, full browser suite
+> `d020a37ee4567eb1d20d9acdcf40a44e45d8d446`; the v0.1.4 build, full browser suite
 > and Signal Garden checks all pass. A MetaMask blocklist-removal review is open at
 > [MetaMask/eth-phishing-detect #298279](https://github.com/MetaMask/eth-phishing-detect/issues/298279),
 > and a false-positive review was also submitted to Blockaid. The Brave warning is tracked in [brave/brave-browser #59436](https://github.com/brave/brave-browser/issues/59436). Reviewers
@@ -274,7 +279,7 @@ Automated verification re-run on 2026-09-30 with FriendSDK v0.1.4 in the Node.js
 - Initial canonical-artwork RPC failure → visible in-game Retry → successful recovery while the parent SDK runtime remains ready: pass.
 - Source/docs/browser/ledger consistency audit: pass.
 - Browser console, sandbox and unexpected-signing checks: pass.
-- The v0.1.4 public preview was rebuilt and published by GitHub Actions on 2026-09-30 from source commit `25cd30f34b944646fe2aec7e234d1d7dffcd6db0`. The manual real-wallet checks below are retained from 2026-09-21 on the prior v0.1.2 build and are not relabeled as v0.1.4 manual verification.
+- The v0.1.4 public preview was rebuilt and published by GitHub Actions on 2026-09-30 from source commit `d020a37ee4567eb1d20d9acdcf40a44e45d8d446`. The manual real-wallet checks below are retained from 2026-09-21 on the prior v0.1.2 build and are not relabeled as v0.1.4 manual verification.
 - Manual public-deployment check on 2026-09-21: pass on an iPhone running
   iOS 26.7 in the MetaMask mobile in-app browser, using freshly verified
   Generations Friend #20838. A 1 sim RF Seed purchase and touch placement
