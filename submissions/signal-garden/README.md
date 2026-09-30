@@ -106,7 +106,7 @@ signals. Both reset with the runtime session.
 
 **Source code**
 
-[Signal Garden source](https://github.com/raindogkitetu/friendsdk/tree/main/games/signal-garden) · FriendSDK v0.1.3
+[Signal Garden source](https://github.com/raindogkitetu/friendsdk/tree/main/games/signal-garden) · FriendSDK v0.1.4
 
 **Playable demo / how to run**
 
@@ -115,7 +115,7 @@ signals. Both reset with the runtime session.
 > **Security-warning review note (2026-09-29):** MetaMask and Brave currently show a
 > malicious/phishing warning for this GitHub Pages preview. The deployed
 > `SOURCE_COMMIT.txt` matches tested source commit
-> `1cb3ea5469842aacb2a0159230072ce0189b5ac6`; the v0.1.3 build, full browser suite
+> `25cd30f34b944646fe2aec7e234d1d7dffcd6db0`; the v0.1.4 build, full browser suite
 > and Signal Garden checks all pass. A MetaMask blocklist-removal review is open at
 > [MetaMask/eth-phishing-detect #298279](https://github.com/MetaMask/eth-phishing-detect/issues/298279),
 > and a false-positive review was also submitted to Blockaid. The Brave warning is tracked in [brave/brave-browser #59436](https://github.com/brave/brave-browser/issues/59436). Reviewers
@@ -194,7 +194,7 @@ The receipt tracks gross Seed purchases, not net wallet movement, so harvesting 
 reopen space and repurchasing makes repeat simulated RF usage auditable rather than
 erasing prior activity.
 
-FriendSDK v0.1.3 does not expose burn/reward-routing, persistence or additional-item
+FriendSDK v0.1.4 does not expose burn/reward-routing, persistence or additional-item
 actions. The preview therefore performs **no live burn and no live reward routing**.
 The protocol reward half is not claimed to fund player bloom payouts. The 85% preview
 return is not a drop-in production payout table: even if the entire current 0.5 RF
@@ -220,10 +220,10 @@ This entry contains no live contract or transaction flow.
 
 **What have you tested?**
 
-Automated verification re-run on 2026-09-29 with FriendSDK v0.1.3 in the Node.js 22 deployment/CI environment:
+Automated verification re-run on 2026-09-30 with FriendSDK v0.1.4 in the Node.js 22 deployment/CI environment:
 
 - SDK build: pass.
-- Official v0.1.3 protected-runtime integrity diff against `f34f4058ed4b4f78ae21fdd22084f0aee6993c6b`: pass.
+- Official v0.1.4 protected-runtime integrity diff against `ca3bf183b809ecf22d87c63d88ce03969a3f8da2`: pass.
 - SDK JavaScript tests: 118 pass, 0 fail, 0 skipped.
 - Contract tests: 16 pass, 0 fail, 1 mainnet-fork-dependent skip.
 - Typecheck and full SDK browser suite: pass.
@@ -253,7 +253,7 @@ Automated verification re-run on 2026-09-29 with FriendSDK v0.1.3 in the Node.js
 - Initial canonical-artwork RPC failure → visible in-game Retry → successful recovery while the parent SDK runtime remains ready: pass.
 - Source/docs/browser/ledger consistency audit: pass.
 - Browser console, sandbox and unexpected-signing checks: pass.
-- The v0.1.3 public preview was rebuilt and published by GitHub Actions on 2026-09-29 from source commit `1cb3ea5469842aacb2a0159230072ce0189b5ac6`. The manual real-wallet checks below are retained from 2026-09-21 on the prior v0.1.2 build and are not relabeled as v0.1.3 manual verification.
+- The v0.1.4 public preview was rebuilt and published by GitHub Actions on 2026-09-30 from source commit `25cd30f34b944646fe2aec7e234d1d7dffcd6db0`. The manual real-wallet checks below are retained from 2026-09-21 on the prior v0.1.2 build and are not relabeled as v0.1.4 manual verification.
 - Manual public-deployment check on 2026-09-21: pass on an iPhone running
   iOS 26.7 in the MetaMask mobile in-app browser, using freshly verified
   Generations Friend #20838. A 1 sim RF Seed purchase and touch placement
@@ -272,8 +272,8 @@ retain the real wallet and ownership gate. The hosted preview publishes
 [`SOURCE_COMMIT.txt`](https://raindogkitetu.github.io/friendsdk/SOURCE_COMMIT.txt)
 so the deployed build can be traced back to the exact source commit.
 
-The fork keeps FriendSDK v0.1.3 runtime/package/contracts/assets and runtime build
-helpers unchanged from official release commit `f34f4058ed4b4f78ae21fdd22084f0aee6993c6b`. CI and deployment
+The fork keeps FriendSDK v0.1.4 runtime/package/contracts/assets and runtime build
+helpers unchanged from official release commit `ca3bf183b809ecf22d87c63d88ce03969a3f8da2`. CI and deployment
 both run a direct protected-path diff against that commit before proceeding. The
 preview deployment also runs on every `main` push and allowlists its complete
 published file set before pushing, so `SOURCE_COMMIT.txt` cannot silently lag main.
@@ -302,7 +302,7 @@ bundle dependency-license comments.
 
 **Credits**
 
-Built with FriendSDK v0.1.3 (Apache-2.0 source license and repository artwork
+Built with FriendSDK v0.1.4 (Apache-2.0 source license and repository artwork
 notice): runtime, wallet/Friend verification, canonical Generations art reader,
 sandbox bridge and simulated ledger. Signal Garden's UI, bloom vectors, rules,
 scoring and economy model are original. No external assets beyond the credited
